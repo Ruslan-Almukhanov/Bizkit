@@ -1,0 +1,8 @@
+.blockForm {
+  width: 445px;
+}
+
+.inputBlock {
+  display: flex;
+  justify-content: space-between;
+}

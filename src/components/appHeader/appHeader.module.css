@@ -1,0 +1,11 @@
+.header {
+  background: #fff;
+  padding: 25px 0 22px 0;
+}
+
+.headerWrapper {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}

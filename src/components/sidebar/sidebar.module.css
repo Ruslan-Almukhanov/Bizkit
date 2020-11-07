@@ -1,0 +1,22 @@
+.sidebar {
+  width: 250px;
+  background: #fff;
+  height: 100%;
+}
+
+.logoBlock {
+  padding: 29px 46px 29px 35px;
+}
+
+.menuItem {
+  padding: 12px 0 12px 32px;
+  background: rgba(0, 123, 255, 0.41);
+  display: flex;
+  align-items: center;
+}
+
+.menuLink {
+  font-size: 14px;
+  color: #000;
+  margin-left: 22px;
+}

@@ -1,0 +1,29 @@
+.input {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.form {
+  padding: 40px 34px 55px 40px;
+  width: 396px;
+  margin: 176px auto 28px auto;
+  background: #fff;
+}
+
+.signup {
+	font-size: 24px;
+	color: #3D5170;
+	font-weight: 400;
+}
+
+.btn {
+  background: #007bff;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  font-size: 14px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+}

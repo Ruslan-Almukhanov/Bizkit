@@ -1,0 +1,62 @@
+body {
+  box-sizing: border-box;
+  background: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  font-size: 24px;
+  color: #3d5170;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+h6 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #3d5170;
+}
+
+img {
+  width: auto;
+}
+
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+input {
+  box-sizing: border-box
+}
+
+a,
+button,
+a:hover,
+a:active {
+  transition: all 0.3s ease;
+}
+
+.btn {
+  background: #007bff;
+  border-radius: 4px;
+  display: block;
+  font-size: 14px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+}
