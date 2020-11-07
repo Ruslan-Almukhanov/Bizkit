@@ -21,38 +21,37 @@ const useStyles = makeStyles({
   }
 });
 
-const postClient = e => {
-	e.preventDefault();
-	
-  const form = e.currentTarget;
-  const formData = new FormData(form);
-  const plainFormData = Object.fromEntries(formData.entries());
-
-  async function postData(url = "") {
-		const token = document.cookie.replace(
-			/(?:(?:^|.*;\s*)token\s*\=\s*([^;]*).*$)|^.*$/,
-			"$1"
-		);
-
-    const response = await fetch(url, {
-      method: "POST",
-			headers: new Headers({
-				"Content-Type": "application/json",
-				Authorization: "Bearer " + token
-			}),
-      body: JSON.stringify(plainFormData)
-    });
-    return await response.json();
-  }
-
-	postData("http://194.67.90.67/api/v1/companies/").then(data => {
-    console.log(data);
-		
-  });
-};
-
-const Popup = ({ setPopUp }) => {
+const Popup = ({ setPopUp, history }) => {
   const classes = useStyles();
+
+  const postClient = e => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const plainFormData = Object.fromEntries(formData.entries());
+
+    async function postData(url = "") {
+      const token = document.cookie.replace(
+        /(?:(?:^|.*;\s*)token\s*\=\s*([^;]*).*$)|^.*$/,
+        "$1"
+      );
+
+      const response = await fetch(url, {
+        method: "POST",
+        headers: new Headers({
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token
+        }),
+        body: JSON.stringify(plainFormData)
+      });
+      return await response.json();
+    }
+
+    postData("http://194.67.90.67/api/v1/companies/").then(data => {
+      console.log(data);
+    });
+  };
 
   return (
     <div className={styles.overlay}>
@@ -80,13 +79,13 @@ const Popup = ({ setPopUp }) => {
           <div className={styles.inputBlock}>
             <TextField
               className={classes.input}
-							name="registered_name"
+              name="registered_name"
               variant="outlined"
               label="Тип юр.лица"
             />
             <TextField
               className={classes.input}
-							name="workscope"
+              name="workscope"
               variant="outlined"
               label="Сфера деятельности"
             />
@@ -120,7 +119,7 @@ const Popup = ({ setPopUp }) => {
             />
           </div>
           <TextField
-						name="description"
+            name="description"
             variant="outlined"
             fullWidth
             label="Дополнительно (описание)"

@@ -2,6 +2,7 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import styles from "./Home.module.css";
 import { makeStyles } from "@material-ui/core/styles";
+import { withRouter } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Home = () => {
+const Home = (props) => {
   const classes = useStyles();
 
   const postData = e => {
@@ -33,6 +34,7 @@ const Home = () => {
 
     postData("http://194.67.90.67/api/v1/token/").then(data => {
       document.cookie = `token=${data.access}`;
+      props.history.push('/clients')
     });
   };
   return (
@@ -58,4 +60,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withRouter(Home);
